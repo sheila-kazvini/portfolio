@@ -3,9 +3,9 @@ import "/src/App.css";
 import { DarkModeToggle } from "./DarkModeToggle";
 function NavBar({ dark, toggle }) {
   const [scrolled, setScrolled] = useState(false);
-  const defaultClasses = "navbar-expand-lg sticky-top";
+  const defaultClasses = "navbar navbar-expand-lg sticky-top";
   let navBarClasses = scrolled
-    ? `${defaultClasses} navbar active`
+    ? `${defaultClasses} navbar navbar-expand-lg active`
     : `${defaultClasses} navbar`;
   const changeBackground = () => {
     if (window.scrollY >= 145) {
@@ -28,13 +28,13 @@ function NavBar({ dark, toggle }) {
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded="true"
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav navbar-scroll me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link" href="#headingAboutMe">
                   About Me
@@ -78,7 +78,7 @@ function NavBar({ dark, toggle }) {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://github.com/sh00000ly"
+                  href="https://github.com/sheila-kazvini"
                   title="Follow On GitHub"
                 >
                   <img src="/portfolio/github.svg" className="icon"></img>

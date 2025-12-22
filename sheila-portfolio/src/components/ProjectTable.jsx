@@ -19,9 +19,17 @@ function ProjectTable({ projArray, className }) {
             <td>{p.language}</td>
             {/* <td>{p.focus}</td> */}
             <td>
-              <a href={p.link} title="Watch Demo">
-                <img src="/portfolio/youtube.svg" className="iconLarge"></img>
-              </a>
+              {p.link != null ? (
+                <a href={p.link} title="Watch Demo">
+                  <img
+                    src="/portfolio/youtube.svg"
+                    className="iconLarge"
+                    id="yt"
+                  ></img>
+                </a>
+              ) : (
+                <td>Not Available Yet</td>
+              )}
             </td>
             <td>
               <a

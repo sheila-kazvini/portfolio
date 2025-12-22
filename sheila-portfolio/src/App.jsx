@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { getProjects } from "./project-accessor";
 import { ProjectTable } from "./components/ProjectTable";
 import { NavBar } from "./components/NavBar";
@@ -68,23 +69,23 @@ function App() {
             </div>
             <img src="/portfolio/headshot-circle.jpg" id="headshot"></img>
           </div>
-          <hr></hr>
-          <div className="block">
-            <h3 id="headingSkills">I am comfortable working with...</h3>
-            <div id="logos">
-              <img src="/portfolio/cs.svg" id="csLogo"></img>
-              <img src="/portfolio/cpp.png" id="cppLogo"></img>
-              <img src="/portfolio/mern.png" id="mernPic"></img>
-              <img src="/portfolio/arduion.png" id="ardLogo"></img>
-              <img src="/portfolio/springboot.svg" id="sprLogo"></img>
-              <img src="/portfolio/PHP-logo.svg" id="phpLogo"></img>
-              <img src="/portfolio/git.png" id="gitLogo"></img>
-            </div>
-            <p className="lead text-center" id="learnBlurb">
-              and always willing to push forward + learn new frameworks,
-              languages, and skills
-            </p>
+        </div>
+        <hr></hr>
+        <div className="block">
+          <h3 id="headingSkills">I am comfortable working with...</h3>
+          <div id="logos">
+            <img src="/portfolio/cs.svg" id="csLogo"></img>
+            <img src="/portfolio/cpp.png" id="cppLogo"></img>
+            <img src="/portfolio/mern.png" id="mernPic"></img>
+            <img src="/portfolio/arduion.png" id="ardLogo"></img>
+            <img src="/portfolio/springboot.svg" id="sprLogo"></img>
+            <img src="/portfolio/PHP-logo.svg" id="phpLogo"></img>
+            <img src="/portfolio/git.png" id="gitLogo"></img>
           </div>
+          <p className="lead text-center" id="learnBlurb">
+            and always willing to push forward + learn new frameworks,
+            languages, and skills
+          </p>
         </div>
         <hr></hr>
         <div className="block">
@@ -104,6 +105,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div class="footer"></div>
     </>
   );
 }

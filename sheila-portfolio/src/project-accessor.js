@@ -55,6 +55,7 @@ const projects = [
       "Wrote a basic console app where the user can choose from a selection of simple text minigames.",
     language: "C++",
     focus: "C++ Basics",
+    link: "https://youtu.be/MTk6KwyBE4M",
   },
   {
     projectID: 10,
@@ -62,6 +63,13 @@ const projects = [
     description: "Wrote and implemented an Ordered List data structure in C++.",
     language: "C++",
     focus: "C++ Basics",
+  },
+  {
+    projectID: 11,
+    name: "Object Oriented Programming Final Project",
+    description: "Basic shopping app coded in C# using OOP principles",
+    language: "C#",
+    link: "https://youtu.be/UsaWL2I_KnQ",
   },
 ];
 
