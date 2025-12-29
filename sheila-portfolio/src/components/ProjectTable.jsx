@@ -8,7 +8,6 @@ function ProjectTable({ projArray, className }) {
           <th>Language</th>
           <th>Demo</th>
           <th>Request Source Code</th>
-          {/* <th>Focus</th> */}
         </tr>
       </thead>
       <tbody>
@@ -17,14 +16,14 @@ function ProjectTable({ projArray, className }) {
             <td>{p.name}</td>
             <td>{p.description}</td>
             <td>{p.language}</td>
-            {/* <td>{p.focus}</td> */}
             <td>
               {p.link != null ? (
-                <a href={p.link} title="Watch Demo">
+                <a href={p.link} title="Watch Demo" aria-label="Video Demo">
                   <img
                     src="/portfolio/youtube.svg"
                     className="iconLarge"
                     id="yt"
+                    aria-hidden="true"
                   ></img>
                 </a>
               ) : (
@@ -41,7 +40,11 @@ function ProjectTable({ projArray, className }) {
                 }
                 title="Request Source Code"
               >
-                <img src="/portfolio/code.svg" className="iconLarge"></img>
+                <img
+                  src="/portfolio/code.svg"
+                  className="iconLarge"
+                  aria-hidden="true"
+                ></img>
               </a>
             </td>
           </tr>
@@ -52,5 +55,3 @@ function ProjectTable({ projArray, className }) {
   );
 }
 export { ProjectTable };
-
-// Have an option to filter by language and focus

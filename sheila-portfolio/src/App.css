@@ -1,96 +1,96 @@
 /* Elements */
-h3 {
-  font-weight: 300 !important;
+#root h2, #root h3 {
+  font-weight: 300;
   text-align: center;
-  color: rgb(163, 88, 88) !important;
-  font-size: 40px !important;
-  line-height: 1.2 !important;
+  color: rgb(163, 88, 88);
+  font-size: 40px;
+  line-height: 1.2;
   padding-top: 5%;
   padding-bottom: 5%;
 }
 p {
   font-size: 1.2rem;
 }
-nav a:hover {
+nav a:hover, #root nav button:hover {
   background-color: #e2dbda;
-  /* box-shadow: 1px rgb(133, 119, 119); */
 }
-nav a {
+nav a, #root nav button {
   border-radius: 10px;
   cursor: pointer;
 }
 
 /* ID'd elements - text */
-#blurbLine {
+#blurb-line {
   font-weight: bold;
 }
-#projectBlurb {
+#project-blurb {
   padding-bottom: 2%;
   padding: 20px;
   margin-top: -10px;
   text-align: center;
   width: 30rem;
   justify-self: center;
-  margin-bottom: 9% !important;
+  margin-bottom: 9%;
   border-radius: 10px;
 }
-#learnBlurb {
+#learn-blurb {
   margin-top: 7%;
 }
 
 /* Images */
 #headshot {
-  height: 250px;
+  height: 350px;
   grid-column: auto;
 }
-#cppLogo {
+#cpp-logo {
   width: 55px;
   height: 60px;
 }
-#gitLogo {
+#git-logo {
   height: 60px;
 }
-#mernPic {
+#mern-pic {
   width: 250px;
 }
-#ardLogo, #sprLogo, #phpLogo, #csLogo {
+#ard-logo, #spr-logo, #php-logo, #cs-logo {
   width: 90px;
   height: 60px;
 }
 
 /* Containers */
-#header {
+#lead-text {
   padding: 3rem;
   background: linear-gradient(90deg, #5c7387 0%, rgb(132, 86, 86) 100%);
   color: rgb(231, 220, 211);
-  max-width: auto !important;
+  max-width: auto;
 }
 #logos {
   display: flex;
   padding-top: 5%;
   justify-content: space-evenly;
 }
-/* #projectsDiv {
-  text-align: center;
-  justify-content: center;
-  justify-self: center;
-} */
+
 
 #root {
-  /* background-color: rgb(255, 255, 255); */
   scroll-behavior: smooth;
   scroll-padding-top: 300px;
   display: grid;
-}
-.container {
-  /* max-width: 100% !important;
-  display: grid; */
+  max-width: 100%;
 }
 
 /* Classes */
 .icon {
   width: 25px;
   height: 25px;
+}
+#root .container {
+  max-width: 100%;
+}
+#root .nav-item button {
+  border: none;
+  padding: 0px;
+  margin-top: 5px;
+  background-color: transparent;
 }
 .lightMode {
   background-color: white;
@@ -114,7 +114,7 @@ nav a {
 .iconLarge:hover {
   background-color: none;
 }
-#navbarSupportedContent {
+#navbar-supported-content {
   max-height: 25rem;
 }
 .nav-item {
@@ -134,11 +134,11 @@ nav a {
 
 /* Striped table */
 
-#projectBlurb.darkMode, #blurb.darkMode {
+#project-blurb.darkMode, #blurb.darkMode {
   background-color: rgb(65, 61, 61);
   
 }
-#projectBlurb.lightMode, #blurb.lightMode {
+#project-blurb.lightMode, #blurb.lightMode {
   background-color: rgb(255, 246, 246);
 }
 
@@ -167,43 +167,43 @@ nav a {
   padding: 2rem;
 }
 #projects.table.table-striped.darkMode tr td, #projects.table.table-striped.darkMode tr th {
-  color: rgb(210, 194, 196) !important;
+  color: rgb(210, 194, 196);
 }
 #projects.table.table-striped.darkMode tr:nth-child(odd) td {
-  background-color: rgb(30, 30, 38) !important;
+  background-color: rgb(30, 30, 38);
   transition: background-color 0.7s;
 }
 #projects.table.table-striped.darkMode tr:nth-child(even) td {
-  background-color: rgb(53, 53, 62)!important;
+  background-color: rgb(53, 53, 62);
     transition: background-color 0.7s;
 }
 #projects.table.table-striped.lightMode thead tr th {
-  background-color: rgb(241, 233, 234) !important;
+  background-color: rgb(241, 233, 234);
   text-align: center;
 }
 #projects.table.table-striped.darkMode thead tr th {
-  background-color: rgb(89, 84, 84) !important;
+  background-color: rgb(89, 84, 84);
 }
 #projects.table tbody tr td  {
-  justify-self: center !important;
+  justify-self: center;
 }
+
 /* Animations */
 /** Thank you to Bassohr for this animation **/
 /* https://codepen.io/bassohr/pen/MWxzYBq */
 
 p, h2, h3, hr, img:not(#projects img) {
-  /* animation-name: text-appear; @keyframes defined below */
-  /* animation-timing-function: ease-in; standard should be linear */
-  /* animation-fill-mode: both; keeps animated values forwards and backwards */
   animation: text-appear ease-in both;
   animation-timeline: view(); /* applies animation state relative to viewport */
   animation-range: 0vh 30vh; /* set 0% and 100% positions */
 }
+
 @prefers-reduced-motion {
   p, h2, h3, hr, table {
     animation: none;
   }
 }
+
 @keyframes text-appear {
   from {
     opacity: 0.2;
@@ -211,23 +211,28 @@ p, h2, h3, hr, img:not(#projects img) {
   }
 }
 
+
 /* Media queries */
 
 
 /* SMALL - MOBILE */
 @media screen and (min-width: 482px) and (max-width: 768px) {
-  #root {
-    /* background-color: cyan !important; */
- 
-  }
   #projects {
     margin-right: px;
   }
-  #projects thead tr th, #projects tbody tr td {
-    padding: 10px !important;
+  #root #projects thead tr th {
+    font-size: 12px;
+    padding: 5px;
+  }
+   #root #projects tbody tr td {
+    padding: 10px;
+    font-size: 12px;
   }
   .navbar-toggler {
     display: block;
+  }
+  #root #logos {
+    margin-left: 0px;
   }
   .block {
     padding: 5rem;
@@ -239,73 +244,48 @@ p, h2, h3, hr, img:not(#projects img) {
   #logos {
     margin-left: 5rem;
   }
-  .navbar {
+  #root .navbar {
    max-width: 5rem; 
-   position: fixed !important;
+   position: fixed;
   }
-  #learnBlurb {
+  #learn-blurb {
   width: auto;
   }
   #projects {
     margin-left: -60px;
   }
-  #projectBlurb {
+  #root #project-blurb {
     padding: 5rem;
-  justify-self: center !important;
-  width: auto;
-  }
-  table {
-    width: 10px !important;
+    justify-self: center;
+    width: auto;
   }
   #logos {
     display: flex;
     justify-content: center;
     width: auto;
   }
-  #mernPic {
+  #mern-pic {
     height: 3rem;
     width: 12rem;
   }
-  #ardLogo, #sprLogo, #phpLogo, #csLogo, #cppLogo, #gitLogo {
+  #ard-logo, #spr-logo, #php-logo, #cs-logo, #cpp-logo, #git-logo {
     height: 3rem;
     width: 3rem;
   }
 }
 
-/* #cppLogo {
-  width: 55px;
-  height: 60px;
-  }
-  #gitLogo {
-    height: 60px;
-  }
-  #mernPic {
-    width: 250px;
-  }
-  #ardLogo, #sprLogo, #phpLogo, #csLogo {
-    width: 90px;
-    height: 60px;
-  }
-   */
 /* MEDIUM */
 @media screen and (min-width: 769px) and (max-width: 992px) {
-#root {
-  /* background-color: brown !important; */
-  max-width: 100% !important;
-}
-#projectsDiv {
-  /* background-color: green !important; */
-  /* justify-content: center; */
-}
-#projectBlurb {
-  justify-self: center !important;
+
+#project-blurb {
+  justify-self: center;
   width: auto;
 }
-.navbar {
-  position: fixed !important;
+#root .navbar {
+  position: fixed;
   max-width: 5rem;
 }
-#aboutMe {
+#about-me {
   display: grid;
   justify-self: center;
   grid-template-columns: 20rem 15rem;
@@ -313,12 +293,10 @@ p, h2, h3, hr, img:not(#projects img) {
   align-self: center;
   padding: 2rem;
   gap: 5rem;
-  /* background-color: yellow; */
 }
 #headshot {
-  /* margin-right:  */
 }
-#logos, #learnBlurb {
+#logos, #learn-blurb {
   margin-left: 20px;
 }
 #projects.table {
@@ -328,27 +306,20 @@ p, h2, h3, hr, img:not(#projects img) {
 #blurb {
   grid-column: 1 / 2;
   width: 20rem;
-  /* background-color: yellow !important; */
   padding: 20px;
   border-radius: 10px;
 } 
-.container {
-  /* max-width: 100% !important; */
-}
 }
 /* LARGE */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
-#root {
-  /* background-color: rgb(81, 86, 82) !important; */
-  max-width: 100% !important;
-}
-#projectBlurb {
-  justify-self: center !important;
+#root #project-blurb {
+  justify-self: center;
+  width: auto;
 }
 .navbar-toggler {
   display: hidden;
 }
-#aboutMe {
+#about-me {
   display: grid;
   grid-template-columns: 30rem 5rem;
   gap: 1rem;
@@ -360,10 +331,7 @@ p, h2, h3, hr, img:not(#projects img) {
   justify-self: center;
   padding: 2rem;
 }
-#projectBlurb {
-  justify-self: center !important;
-  width: auto;
-}
+
 #projects {
   margin-left: 120px;
 }
@@ -373,26 +341,22 @@ p, h2, h3, hr, img:not(#projects img) {
 @media screen and (min-width: 1201px) {
 #root {
 
-
 }
-#header {
+header {
   margin-top: 0px;
 }
-#aboutMe {
+#about-me {
 display: grid;
 grid-template-columns: 2fr 1fr;
 gap: 10rem;
-/* background-color: purple; */
-/* padding: 5rem; */
 }
-#projectsDiv {
+#projects-div {
   display: grid;
 }
 
 .block {
   display: grid;
   grid-template-rows: 1fr;
-  /* background-color: green !important; */
   justify-content: center;
   justify-self: center;
 }
@@ -408,11 +372,8 @@ gap: 10rem;
 #projects {
   justify-self: center;
 }
-.container {
-  max-width: 100% !important;
-}
-h3, #blurb, hr {
-  margin-bottom: 30px !important;
+#root h3, #root #blurb, #root hr {
+  margin-bottom: 30px;
 }
 #logos {
   margin-bottom: 50px;
